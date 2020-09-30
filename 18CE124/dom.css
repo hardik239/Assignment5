@@ -1,0 +1,206 @@
+body{
+	font-family: Calibri;
+  font-size: 22px;
+	background-color: rgba(2,2,40,1);
+}
+.main-content{
+	color: white;
+	margin-right: 600px;
+	margin-top: 100px;
+	margin-left:100px;
+}
+.main-content-heading{
+	margin-left: -50px;
+}
+.main-content-para{
+  margin-right: 200px;
+  font-size: 19px;
+  text-align: justify;
+}
+i {
+  border: solid green;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 3px;
+}
+b {
+  border: solid red;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+h1{
+	font-size: 50px;
+}
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+  font-size: 20px;
+  color:white;
+}
+.tabular{
+  margin-top: -500px;
+  margin-right: 345px;
+  float: right;
+  color: white;
+}
+table {
+  font-family: Arial, sans-serif;
+  color: white;
+  border-collapse: collapse;
+  font-size: 20px;
+  width: 600px;
+  float: right;
+  margin-top: -500px;
+  margin-right: 50px;
+  border: 1px solid rgba(2,2,40,1);
+}
+
+th {
+  background-color: rgb(11,38,132,1);
+}
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(0,5,71,1);
+}
+footer{
+  height: 30px;
+  box-shadow: 10px;
+  color:yellow;
+  background-color:blue;
+  text-align: center;
+  font-size: 30px;
+}
+div.mainimg {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.69), 0 6px 20px 0 rgba(0, 0, 0, 0.89);
+}
+.getelebytagname{
+  position: relative;
+  margin-left: 2%;
+  margin-top: 2%;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #AC2832;
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+  background: transparent;
+  transition: .6s;
+  cursor: pointer;
+  color: white; 
+}
+
+.getelebyid{
+  position: relative;
+  margin-left: 22%;
+  margin-top: -3.6%;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #AC2832;
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+  background: transparent;
+  transition: .6s;
+  cursor: pointer;
+}
+.getelebyclassname{
+  position: relative;
+  margin-left: 42%;
+  margin-top: -3.8%;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #AC2832;
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+  background: transparent;
+  transition: .6s;
+  cursor: pointer;
+}
+.queryselectorall{
+  position: relative;
+  margin-left: 62%;
+  margin-top: -3.7%;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #AC2832;
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+  background: transparent;
+  transition: .6s;
+  cursor: pointer;
+}
+.getattribute{
+  position: relative;
+  margin-left: 82%;
+  margin-top: -3.7%;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #AC2832;
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+  background: transparent;
+  transition: .6s;
+  cursor: pointer;
+}
+.getattribute:hover,.getelebytagname:hover,.getelebyid:hover,.getelebyclassname:hover,.queryselectorall:hover{
+  background-color: green;
+}
+
+.getattribute:active,.getelebytagname:active,.getelebyid:active,.getelebyclassname:active,.queryselectorall:active{
+  background-color: red;
+}
+
+.byname{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  font-size: 20px;
+  transform: translate(-50%, -55%);
+  text-align: center;
+  color: black;
+}
+.a1{
+    background: red;
+    transition: ease .9s;
+    transition-delay: 0.1s;
+    box-shadow: 0px 0px 20px #FFED86;
+}
+.a2{
+    background-color: #9BC86A;
+    transition: ease .9s;
+    transition-delay: .1s;
+    box-shadow: 0px 0px 40px #FFED86;
+}
+.a3{
+    font-size: 30px;
+}
+.a4{
+    background: #9BC86A;
+    transition: ease .9s;
+    transition-delay: 0.1s;
+}
+.a11{
+    transition: ease .9s;
+    transition-delay: 0.1s;
+    box-shadow: 0px 0px 0px black;
+}
+.a33{
+    font-size: 25px;
+}

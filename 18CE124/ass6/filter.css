@@ -1,0 +1,156 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+img{
+  max-height: 900px;
+  width: 100%;
+}
+.sidenav {
+  height: 100%;
+  width: 30%;
+  position: fixed;
+  z-index: 1;
+
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #0009;
+  width: 100%;
+  height: 90%;
+}
+.tab button {
+  display: block;
+  background-color: hsla(60,100%,50%,0);
+  color: white;
+  padding: 22px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color:rgba(255,192,203,0.2);
+  color: white;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color:rgba(255,192,203,0.8);
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: right; 
+  width: 65%;
+  border-left: none;
+  height: 300px;
+}
+/*For creating the fading effect*/
+.tabcontent {
+  animation: fadeEffect 1.5s;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.sidenav {
+  height: 100%;
+  width: 35%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-image: url('sideimage.jpg');
+  background-size:cover;
+}
+
+.sidenav a {
+  padding: 6px 8px 0px 0px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.abc{
+	font-family: 'Aclonica';
+  font-size: 50px;
+  background: -webkit-linear-gradient(#333, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.blur{
+	-webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+.bright{
+	filter: brightness(0.9);
+}
+.contra{
+	-webkit-filter: contrast(200%);
+          filter: contrast(200%);
+}
+.grey{
+	-webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.hue{
+	-webkit-filter: hue-rotate(185deg);
+    filter: hue-rotate(185deg);
+}
+.invert{
+	-webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+.sat{
+	-webkit-filter: saturate(200%);
+          filter: saturate(200%);
+}
+.sep{
+	-webkit-filter: sepia(80%);
+          filter: sepia(80%);
+}
+.contra-grey{
+	-webkit-filter: contrast(1.9) grayscale(1);
+  filter: contrast(1.9) grayscale(1);
+}
+.invert-hue{
+	-webkit-filter: invert(90%) hue-rotate(175deg);
+  filter: invert(90%) hue-rotate(175deg);
+}
+.bright-sat-contra-hue{
+-webkit-filter: brightness(0.7) saturate(150%) contrast(190%) hue-rotate(30deg);
+  filter: brightness(0.7) saturate(150%) contrast(190%) hue-rotate(30deg);
+}

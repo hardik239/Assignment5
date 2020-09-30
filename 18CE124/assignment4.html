@@ -1,0 +1,96 @@
+<html> 
+<head>
+<title>Assignment 4</title>
+<script>
+ 
+        function display() {
+        if(validate_form()){
+            DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+            message = "<ul><li><b>Name: </b>" + document.getElementById("myInput1").value;
+            message += "<li><b>Gender: </b>" + displayRadioValue();
+            message += "<li><b>Country: </b>" + document.getElementById("myInput3").value;
+            message += "<li><b>Email: </b>" + document.getElementById("myInput4").value;
+            message += "<li><b>Phone Number: </b>" + document.getElementById("myInput5").value;
+            DispWin.document.write(message);
+            }
+        }
+        function validate_form() {
+            var phoneno = /^\d{10}$/;
+
+            if(!(document.getElementById("myInput5").value.match(phoneno))){
+                alert("phone number is wrong.");
+                return false;
+            }
+
+            if (document.getElementById("myInput1").value == "") {
+                alert("Please fill Your Name");
+                return false;
+            }
+
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(document.getElementById("myInput4").value)) {
+                alert("You have entered an invalid email address!")
+                return false
+            }
+            alert("sucessfully Submitted");
+            return true;
+        }
+        function displayRadioValue() { 
+            var ele = document.getElementsByName('gn'); 
+                if(ele[0].checked) 
+                        return "Male"; 
+                else
+                        return "Female";
+        } 
+      function blurFunction() 
+       { 
+    	document.getElementById("myInput1").style.background = "skyblue";
+       }
+        
+</script>
+<style type="text/css">
+*{
+    font-family:sans-serif;
+ }
+ body{
+ 	font-family: Calibri;
+  background-image :url('1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+<div style="margin-top:10%;margin-left:500px;background-color:black;width:425;height:350">
+    <form  action="" method="post">
+    <fieldset>
+    <legend><font style="color:white;font-size: 25px;">Registration Form</font>></legend><br><br>
+       <font style="color:white;margin-left:10px">Name<span style="color:red">*</span> :</font> <input type="text" id="myInput1" name="fname" style="width:200px;height:20px;margin-left:180px;margin-top:-20px" required onblur="blurFunction()" onblur="myFunction()" placeholder="Enter name here"><br><br>
+       
+       	<font style="color:white;margin-left:10px">Gender :</font>
+       		<font style="color:white;margin-left:110px;margin-top:-20px">Male </font><input type="radio" checked name="gn" id="myInput2">
+        	<font style="color:white;margin-left:10px"> Female </font><input type="radio" name="gn" id="myInput2"> <br><br>
+        
+        <font style="color:white;margin-left:10px">Country :</font> <select style="width:200px;height:20px;margin-left:180px;margin-top:-20px" required id="myInput3">
+        <option value="India" >India</option>
+        <option value="USA">USA</option>
+        <option value="South Africa">South Africa</option>
+        <option value="China">China</option>
+        </select><br><br>
+        
+        <font style="color:white;margin-left:10px">Email<span style="color:red">*</span> :</font> <input type="email" placeholder="Enter e-mail here" name="email" style="width:200px;
+        height:20px;margin-left:180px;margin-top:-20px" id="myInput4"><br><br>
+        
+        <font style="color:white;margin-left:10px">Password<span style="color:red">*</span> :</font> <input type="password" pattern="[A-Za-Z1-9]{8}"name="pw" placeholder="Enter password here" style="width:200px;height:20px;margin-left:180px;margin-top:-20px" required id="pw"><br><br>
+        
+        <font style="color:white;margin-left:10px">Phone No<span style="color:red">*</span> :</font> <input placeholder="Enter number here" type="tel" maxlength="10" name="ph" style="width:200px;height:20px;margin-left:180px;margin-top:-20px" required id="myInput5"><br><br><br>
+        
+        <button style="font-size: 16px;text-align:center;color:#fff;margin-left:120px;background-color: blue;border: none;border-radius: 15px;" onclick="display()">Submit</button>
+        <input type="Reset" value="Reset" style="font-size: 16px;text-align: center;color: #fff;margin-left:30px;background-color: blue;border: none;
+        border-radius: 15px;">
+    </fieldset>
+</form>
+</div>
+</body>
+</html>
+
