@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="ass2.css">
+  <script type="text/javascript" src="dom.js"></script>
+	<title>DOM traversal</title>
+</head>
+
+<body>
+<div class="main-content">
+  	<p class="main-content-heading">DEVELOPER TOOLS</p>
+	<p><h1>JavaScript is this year’s<br>
+	 	most widely known<br>
+	 	language (again)</h1></p>
+	<br><br>
+	<div class="main-content-para">
+		In terms of most known languages, little has changed over the last three years. In fact, the top 10 languages saw only two changes from last year: C# and PHP switched between sixth and seventh position.<br><br>
+		It’s worth noting that the best known language, JavaScript, isn’t a language most developers learn to code in—only 5% of respondents reported it as their first programming language. Java follows a similar pattern: it’s the second best known language overall, yet only 13% of developers say it was their first language learned.</p>
+	</div>  
+</div>
+
+<table border="3">
+  <tr>
+    <th style="text-align: center;" colspan="5">
+      Best known languages: 2018-2020 
+    </th>
+  </tr>
+
+  <tr>
+    <th>Language</th>
+    <th style="width:20px"></th>
+    <th>2020</th>
+    <th>2019</th>
+    <th>2018</th>
+  </tr>
+  <tr class="aaa">
+  	<td>Javascript</td>
+  	<td></td>
+  	<td>1</td>
+  	<td>1</td>
+  	<td>2</td>
+  </tr>
+  </div>
+
+  <tr id="bb">
+  	<td>Java</td>
+  	<td></td>
+  	<td>2</td>
+  	<td>2</td>
+  	<td>1</td>
+  </tr>
+  
+  <tr class="aaa">
+  	<td>C</td>
+  	<td></td>
+  	<td>3</td>
+  	<td>3</td>
+  	<td>3</td>
+  </tr>
+
+  <tr class="aaa">
+  	<td>Python</td>
+  	<td></td>
+  	<td>4</td>
+  	<td>4</td>
+  	<td>5</td>
+  </tr>
+
+  <tr class="aa">
+  	<td>C++</td>
+  	<td></td>
+  	<td>5</td>
+  	<td>5</td>
+  	<td>4</td>
+  </tr>
+  <tr>
+  	<td>C#</td>
+  	<td><i class="arrow up"></i></td>
+  	<td>6</td>
+  	<td>7</td>
+  	<td>6</td>
+  </tr>
+  <tr class="aaa">
+  	<td>PHP</td>
+  	<td><b class="arrow down"></b></td>
+  	<td>7</td>
+  	<td>6</td>
+  	<td>7</td>
+  </tr class="aa">
+  <tr>
+  	<td>TypeScript</td>
+  	<td></td>
+  	<td>8</td>
+  	<td>8</td>
+  	<td>8</td>
+  </tr>
+  <tr class="aa">
+  	<td>Pascal</td>
+  	<td></td>
+  	<td>9</td>
+  	<td>9</td>
+  	<td>9</td>
+  </tr>
+  <tr class="aaa">
+  	<td>R</td>
+  	<td></td>
+  	<td>10</td>
+  	<td>10</td>
+  	<td>10</td>
+  </tr>
+  </table>
+
+
+<div class="getelebytagname" onclick="function1()">
+        <div class="byname" style="color: white;">
+            getElebyTagName
+        </div>
+    </div>
+    <div class="getelebyid" onclick="function2()">
+        <div class="byname"style="color: white;">
+            getElebyId
+        </div>
+    </div>
+    <div class="getelebyclassname" onclick="function()">
+        <div class="byname" style="color: white;">
+            getElebyClassName
+        </div>
+    </div>
+    <div class="queryselectorall" onclick="function4()">
+        <div class="byname" style="color: white;">
+            querySelectorAll
+        </div>
+    </div>
+    <div class="getattribute" onclick="function5()">
+        <div class="byname" style="color: white;">
+            getAttribute
+        </div>
+    </div>
+
+<script type="text/javascript">
+  function function23(){
+    alert("Two languages have changed position compared to last year");
+  }
+var y=document.getElementsByClassName('result');
+function function1(){
+    y[0].classList.add("a33");
+    var x=document.getElementsByTagName('tr')
+    var i;
+    for(i=2;i<x.length;i++)
+    {
+        x[i].classList.add("a1");
+    }
+}
+function function11(){
+    var x=document.getElementsByTagName('tr')
+    var i;
+    for(i=2;i<x.length;i++)
+    {
+        x[i].classList.add("a11");
+    }
+}
+function function2(){
+    function11();
+    y[0].classList.add("a33");
+    var x=document.getElementById('bb');
+    alert('total credits earned 23.');
+    x.classList.add("a2");
+}
+
+function function3(){
+    function11();
+    y[0].classList.add("a3");
+}
+
+function function4(){
+    var x=document.querySelectorAll('.aa');
+    var i;
+    for(i=0;i<x.length;i++)
+    {
+        x[i].classList.add("a4");
+    }
+}
+
+function function5(){
+    var i,x;
+    function11();
+    y[0].classList.add("a33");
+        x=document.getElementsByTagName('th')[0].getAttribute("colspan");
+        alert('colspan in table header is '+x);
+}      
+</script>
+</body>
+</html>

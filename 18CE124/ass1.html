@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+  myFunction();
+    function myFunction() {
+      alert("Hello! Welcome to my page!");}
+</script>
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;margin-top: 100px}
+a{
+  color:white;
+}
+.left {
+  float: left;
+  border: 1px solid #ccc;
+  width: 30%;
+  height: 300px;
+  
+}
+
+.left button {
+  display: block;
+  background-color: inherit;
+  color: white;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.left button:hover {
+  opacity: 0.5;
+  background-color: green;
+}
+
+.left button.active {
+  background-color: green;
+  opacity: 1;
+}
+
+.tabcontent {
+  color: white;
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+
+}
+
+.tabcontent {
+  animation: fadeEffect 2s; /* Fading effect takes 1 second */
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+body {
+  background-image: url("https://images.unsplash.com/photo-1560015534-cee980ba7e13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1875&q=80");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<center><h2><font color="white">Name:Akshit Soneji<br>Id No:18ce124</h2></center>
+
+<div class="left">
+  <button onclick="info(event, 'Bio')" id="defaultOpen">Bio</button>
+  <button onclick="info(event, 'Skills')">Skills</button>
+  <button onclick="info(event, 'Result')">Result</button>
+</div>
+
+<div id="Bio" class="tabcontent">
+  <h3>Bio</h3>
+  <p>Akshit Soneji is a computer engineering student at CSPIT, CHARUSAT</p>
+  <p>As a freshman stood 2nd in department.He is a state level badminton player.He is also ML enthusiast</p>
+  <p>You can contact him on <a href="https://www.linkedin.com/in/akshit-soneji-69b34b194/"> LinkedIn</a></p>
+</div>
+
+<div id="Skills" class="tabcontent">
+  <h3>Skills</h3>
+  <p>C,C++,JAVA,HTML,CSS,Javascript,PHP,WordPress</p> 
+</div>
+
+<div id="Result" class="tabcontent">
+  <h3>Result</h3>
+  <p>SEM 1:10.00</p>
+  <p>SEM 2: 9.67</p>
+  <p>SEM 3: 9.43</p>
+</div>
+
+<script>
+function info(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<h2><center>CSPIT CE<center></h2>
+</body>
+</html> 

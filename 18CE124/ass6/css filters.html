@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="filter.css">
+
+</head>
+<body>
+
+<div class="sidenav" class="bgimg">
+ 
+ <div class="abc">CSS Filters</div>
+ <div class="tab">
+  <button class="tablinks" onclick="openFilter(event, 'Original')" id="defaultOpen">Original</button>
+  <button class="tablinks" onclick="openFilter(event, 'blur')">Blur</button>
+  <button class="tablinks" onclick="openFilter(event, 'bright')">Bright</button>
+  <button class="tablinks" onclick="openFilter(event, 'Contrast')">Contrast</button>
+  <button class="tablinks" onclick="openFilter(event, 'Gray-scale')">Gray-scale</button>
+  <button class="tablinks" onclick="openFilter(event, 'Hue-Rotate')">Hue-Rotate</button>
+  <button class="tablinks" onclick="openFilter(event, 'Invert')">Invert</button>
+  <button class="tablinks" onclick="openFilter(event, 'Saturated')">Saturated</button>
+  <button class="tablinks" onclick="openFilter(event, 'Sepia')">Sepia</button>
+  <button class="tablinks" onclick="openFilter(event, 'contra-grey')">Contrast+GrayScale</button>
+  <button class="tablinks" onclick="openFilter(event, 'invert-hue')">Invert+Hue-Rotate</button>
+  <button class="tablinks" onclick="openFilter(event, 'br-sa-cont-hu')">Bright+Saturated+Contrast+Hue</button>
+ </div>
+</div>
+
+<div id="Original" class="tabcontent">
+	<img class="rose" src="rose.jpg">
+</div>
+
+<div id="blur" class="tabcontent">
+	<img class="blur" src="rose.jpg">
+</div>
+
+<div id='bright' class="tabcontent">
+	<img class="bright" src="rose.jpg">
+</div>
+
+<div id="Contrast" class="tabcontent">
+	<img class="contra" src="rose.jpg" > 
+</div>
+
+<div id="Gray-scale" class="tabcontent">
+    <img class="grey" src="rose.jpg">  
+</div>
+
+<div id="Hue-Rotate" class="tabcontent">
+  <img class="hue" src="rose.jpg">
+</div>
+
+<div id="Invert" class="tabcontent">
+  <img class="invert" src="rose.jpg">
+</div> 
+
+<div id="Saturated" class="tabcontent">
+  <img class="sat" src="rose.jpg">
+</div> 
+
+<div id="Sepia" class="tabcontent">
+  <img class="sep" src="rose.jpg">
+</div> 
+
+<div id="contra-grey" class="tabcontent">
+  <img class="contra-grey" src="rose.jpg">
+</div> 
+
+<div id="invert-hue" class="tabcontent">
+  <img class="invert-hue" src="rose.jpg">
+</div> 
+
+<div id="br-sa-cont-hu" class="tabcontent">
+  <img class="mySlides bright-sat-contra-hue" src="rose.jpg">
+</div> 
+
+<!--Used for onclick only-->
+<script>
+function openFilter(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html> 

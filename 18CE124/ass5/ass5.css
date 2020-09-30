@@ -1,0 +1,65 @@
+*{
+    font-family: "Segoe UI" ,monospace;
+ }
+ body{
+ 	font-family: "Segoe UI";	
+ 	background-image :url('1.jpg');
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	color: white;
+  	margin-left: 10px;
+}
+.main{
+	margin-top:7%;
+	margin-left:38%;
+	width:425px;
+	height:470px;
+	border-radius: 50px;
+}
+span{
+	color:red;
+}
+legend{
+	font-size: 25px;
+}
+fieldset{
+	border-radius: 50px;
+	background-color:#0009; 
+}
+label{
+	margin-left: 10px;
+}
+input{
+	padding: 12px;
+	
+}
+.buttons1{
+	font-size: 16px;
+	text-align:center;
+	color:#fff;
+	margin-left:80px;
+	width:100px;
+	background-color:green;
+	border: 1px solid white;
+	border-radius: 15px;
+}
+.buttons2{
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	width: 100px;
+	margin-left:30px;
+	background-color: red;
+	border-radius: 15px;
+}
+#fname,#lname{
+	width:99px;
+	height:20px;
+}
+#country,#maill,#Student,#Inst,#ph{
+	width:200px;
+	height:20px;
+	margin-left:180px;
+	margin-top:-20px;
+}
